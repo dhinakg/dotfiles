@@ -1,3 +1,21 @@
+# [tool.poetry]
+# name = ""
+# version = ""
+# description = ""
+# authors = ["Dhinak G"]
+# package-mode = false
+
+# [tool.poetry.dependencies]
+# python = "^3.10"
+
+# [tool.poetry.group.dev.dependencies]
+# flake8 = "^6.1.0"
+# pylint = "^3.2.3"
+# black = "^23.12.1"
+# isort = "^5.13.2"
+# ruff = "^0.4.9"
+
+
 [tool.isort]
 profile = "black"
 line_length = 140
@@ -12,8 +30,14 @@ init-hook = "import os, sys; sys.path.append(os.path.dirname('.'))"
 max-line-length = "140"
 
 [tool.pylint.'MESSAGES CONTROL']
-disable="logging-fstring-interpolation, missing-function-docstring, no-else-return"
+disable = "logging-fstring-interpolation, missing-function-docstring, no-else-return"
 
 # If ruff is your fancy. I haven't completely tested it yet though
 [tool.ruff]
+select = ["E", "F", "W"]
+ignore = ["E203"]
 line-length = 140
+
+# [build-system]
+# requires = ["poetry-core"]
+# build-backend = "poetry.core.masonry.api"
