@@ -9,9 +9,9 @@
 # python = "^3.10"
 
 # [tool.poetry.group.dev.dependencies]
-# flake8 = "^6.1.0"
-# pylint = "^3.2.3"
-# black = "^23.12.1"
+# flake8 = "^7.1.1"
+# # pylint = "^3.2.3"
+# black = "^24.10.0"
 # isort = "^5.13.2"
 # ruff = "^0.4.9"
 
@@ -34,8 +34,26 @@ disable = "logging-fstring-interpolation, missing-function-docstring, no-else-re
 
 # If ruff is your fancy. I haven't completely tested it yet though
 [tool.ruff]
-select = ["E", "F", "W"]
-ignore = ["E203"]
+select = [
+    "E",
+    "F",
+    "W",
+    "PTH",
+    "TD",
+    "RUF",
+    "FURB",
+    "Q",
+    "PLE",
+    "PLW",
+    "PLR",
+    "PLC",
+    "D419",    # empty-docstring
+    # "PLC0414", # useless-import-alias
+    # "PLC2401", # non-ascii-name
+    # "PLC2801", # unnecessary-dunder-call
+    # "PLC3002", # unnecessary-direct-lambda-call
+]
+# ignore = []
 line-length = 140
 
 # [build-system]
