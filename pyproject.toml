@@ -29,7 +29,7 @@ line-length = 140
 
 [tool.ruff.lint]
 preview = true
-select = [
+extend-select = [
     "E",
     "F",
     "W",
